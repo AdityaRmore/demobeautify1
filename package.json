@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "start": "node app.js"
   },
   "author": "",
   "license": "ISC",
@@ -14,6 +14,9 @@
     "mongodb": "4.1",
     "mongoose": "^6.11.1",
     "nodemon": "^2.0.22"
+  },
+  "devDependencies": {
+    "install": "^1.2.0"
   },
   "description": ""
 }
