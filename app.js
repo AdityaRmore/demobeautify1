@@ -192,9 +192,10 @@ mongoose.connect("mongodb+srv://admin:admin@cluster0.dfbie4m.mongodb.net/beautif
             });
 
             //monthlySale
-                        app.get("/api/monthlySale/", async (req, res) => {
+                        app.get("/api/monthlySale/:adminid", async (req, res) => {
                             try {
-                                let data = await monthlySale.find().sort({ month: 1 });
+                            const { adminid } = req.params;
+                                let data = await monthlySale.find({adminid:adminid}).sort({ month: 1 });
                                 res.status(200).json(data);
                             } catch (e) {
                                 res.status(500).json(error);
