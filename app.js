@@ -28,7 +28,7 @@ mongoose.connect("mongodb+srv://admin:admin@cluster0.dfbie4m.mongodb.net/beautif
             console.log("Status", "Connected to mongoose");
 
              app.get("/", (req, res) => {
-                res.status(200).json({'Connected' });
+                res.status(200).send('Connected');
                                     console.log("Connected");
             });
             // Add User 
