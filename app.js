@@ -27,10 +27,6 @@ mongoose.connect("mongodb+srv://admin:admin@cluster0.dfbie4m.mongodb.net/beautif
         if (!error) {
             console.log("Status", "Connected to mongoose");
 
-             app.get("/", (req, res) => {
-                res.status(200).send('Connected');
-                                    console.log("Connected");
-            });
             // Add User 
             app.post("/api/add_user", async (req, res) => {
                 let data = userData(req.body);
